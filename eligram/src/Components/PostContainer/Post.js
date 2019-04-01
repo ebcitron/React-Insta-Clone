@@ -1,23 +1,20 @@
-import React, { PureComponent } from 'react';
+import React from 'react';
+import PostHeader from './PostHeader';
+import CommentSection from '../CommentSection/CommentSection';
 
 
-class Post extends React.Component {
-    constructor(props) {
-        super(props);
-    }
-    
-    render() {
-        return (
-            <div className='Post'>
-            <h1> IBIKI </h1>
-                <h2> {this.props}</h2>
-                </div>
+const Post = props => {
+    console.log("in Post, state, props", props.post);
+    return (
+            <div> 
+            <PostHeader post={props.post} />
+            <CommentSection comments = {props.post.comments} />
+            </div>
         );
-    }
-}
-
-
-
-
-
+        }
+    
+    
+    
+    
+    
 export default Post;

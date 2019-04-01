@@ -1,17 +1,6 @@
 import React, { Component } from 'react';
-import './dummy-data';
-import dummyData from './App.css';
+import dummyData from './dummy-data';
 import PostContainer from './Components/PostContainer/PostContainer';
-
-// const ADummyData = {
-  
-//     id: dummyData.id,
-//       username: dummyData.username,
-//         thumbnailUrl: dummyData.thumbnailUrl,
-//           imageUrl: dummyData.imageUrl,
-//             likes: dummyData.likes,
-//               timeStamp: dummyData.timeStamp,
-//   }
 
 
 
@@ -20,7 +9,7 @@ class App extends Component {
     super();
     this.state = {
       data: dummyData
-    }
+          }
   }
   render() {
     console.log("CLOG APP STATE PROPS", this.state.dummyData, this.props);
