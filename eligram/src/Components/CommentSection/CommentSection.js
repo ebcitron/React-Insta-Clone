@@ -1,5 +1,5 @@
 import React from 'react';
-
+import Comment from './Comment';
 
 const CommentSection =props =>{
        
@@ -9,7 +9,7 @@ const CommentSection =props =>{
                 {props.comments.map(comment => {
                     return (
                         <div>
-                            <p>{props.comments.comments}</p>
+                            <Comment comment={comment} />
                             
                         </div>
                     )
