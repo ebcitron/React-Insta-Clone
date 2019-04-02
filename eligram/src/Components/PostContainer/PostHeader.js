@@ -6,23 +6,23 @@ const PostHeader = props => {
     console.log("in Post, state, props", props.post);
         return (
             <div className='Post'>
-                <h2> {props.post.username}</h2>
+                <h2> {props.username}</h2>
                 <p>
                     
-                    {props.post.thumbnailUrl}
+                    {props.thumbnailUrl}
                    </p> 
                 <p>
-                    {props.post.id}
+                    {props.id}
                     </p>
                     
 
                 <p>
 
-                {props.post.imageUrl}
+                {props.imageUrl}
                 </p>
                 <p>
                     
-                    {props.post.timestamp}
+                    {props.timestamp}
                 </p>
                 
                 

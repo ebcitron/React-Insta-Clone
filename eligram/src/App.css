@@ -5,7 +5,9 @@
 
 }
 
-
+.SearchBar{
+  border: 2px solid salmon;
+}
 .App-header {
 
   display: flex;
@@ -14,6 +16,14 @@
   justify-content: center;
   font-size: calc(10px + 2vmin);
   color: white;
+}
+.CommentSection{
+  background: black;
+  
+}
+
+.comment{
+  border: 2px solid turquoise;
 }
 
 .App-link {
@@ -26,4 +36,9 @@
   to {
     transform: rotate(360deg);
   }
+}
+
+.post{
+  border: 2px solid pink;
+  margin-top: 3rem;
 }

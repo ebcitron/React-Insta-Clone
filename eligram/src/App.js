@@ -27,6 +27,15 @@ class App extends Component {
     
     this.setState({ data: dummyData})
   }
+
+  search = e => {
+    const data = this.state.data.filter(p => {
+      if (data.username.includes(data.target.value)) {
+        return data;
+      }
+    });
+    this.setState({ filtered: data });
+  };
   render() {
     console.log("CLOG APP STATE PROPS", this.state.dummyData, this.props);
     return (
@@ -34,12 +43,13 @@ class App extends Component {
         <header className="App-header">
           <SearchBar
             search={this.state.search}
-            searchSubmit={this.searchSubmit}
+            searchSubmit={this.search}
             handleChange={this.handleChange}
           />
         </header>
         <PostContainer
           postData={this.state.data}
+          handleChange={this.handleChange}
 
         />
 
