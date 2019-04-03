@@ -1,16 +1,16 @@
 import React from 'react';
 
 const SearchBar = props => {
-  
+    
     return (
         <div className='SearchBar'>
             <input
                 onSubmit = {props.searchSubmit}
                 type='text'
                 placeholder='Search for Something'
-                value={props.search}
+                value={props.searchValue}
                 onChange={props.handleChange}
-                name='search'
+                name='searchValue'
             />
             <button onClick={props.searchSubmit}>Search</button>
         </div>

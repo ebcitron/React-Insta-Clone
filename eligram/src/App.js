@@ -10,39 +10,44 @@ class App extends Component {
     super();
     this.state = {
       data: [],
-      search: '',
-      filtered: []
+      searchValue: '',
+      filtered:[]
     }
   }
 
   handleChange = e => {
 
     this.setState({ [e.target.name]: e.target.value });
+    
 
   }
-  // componentDidUpdate() {
-  //   this.setState({filtered: da})
-  // }
+
+
   componentDidMount() {
     
-    this.setState({ data: dummyData})
+    this.setState({ data: dummyData });
+  
   }
 
   search = e => {
-    const data = this.state.data.filter(p => {
-      if (data.username.includes(data.target.value)) {
+    const filteredData = this.state.data.filter(data => {
+      if ((data.username.includes(this.state.searchValue))&&(this.state.searchValue)){
         return data;
       }
     });
-    this.setState({ filtered: data });
+
+    this.setState({ data: filteredData });
   };
+
+
   render() {
     console.log("CLOG APP STATE PROPS", this.state.dummyData, this.props);
     return (
       <div className="App">
         <header className="App-header">
           <SearchBar
-            search={this.state.search}
+            searchValue={this.state.searchValue}
+            searchData={this.state.data}
             searchSubmit={this.search}
             handleChange={this.handleChange}
           />

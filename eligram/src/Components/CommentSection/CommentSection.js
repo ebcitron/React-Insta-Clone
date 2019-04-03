@@ -13,7 +13,7 @@ class CommentSection extends React.Component {
  
     handleChange = e => {
 
-        this.setState({ [e.target.name]: e.target.value });
+        this.setState({ comment: e.target.value });
     
     }
     
@@ -48,7 +48,7 @@ class CommentSection extends React.Component {
                 <NewComment
                     
                     handleChange={this.handleChange}
-                    submitComment={this.submitComment} 
+                    newValue={this.state.comment}
                 enterComment = {this.enterComment}/>
                 {/* <NewComment comments={props.handleChange} /> */}
                 

@@ -17,7 +17,7 @@ const NewComment = props => {
                 onSubmit = {props.enterComment}
                 type='text'
                 placeholder='Comment'
-                value={props.submitComment}
+                value={props.newValue}
                 onChange={props.handleChange}
                 name='comment'
             />
