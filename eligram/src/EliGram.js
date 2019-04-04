@@ -31,7 +31,7 @@ class EliGram extends Component {
 
   search = e => {
     const filteredData = this.state.data.filter(data => {
-      if ((data.username.includes(this.s      tate.searchValue))&&(this.state.searchValue)){
+      if ((data.username.includes(this.state.searchValue))&&(this.state.searchValue)){
         return data;
       }
     });
