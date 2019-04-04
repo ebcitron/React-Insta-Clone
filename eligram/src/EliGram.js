@@ -11,7 +11,7 @@ class EliGram extends Component {
     this.state = {
       data: [],
       searchValue: '',
-      filtered:[]
+      filtered:[] 
     }
   }
 
